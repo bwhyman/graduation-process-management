@@ -1,0 +1,24 @@
+POST http://localhost:8080/api/admin/teachers
+Content-Type: application/json
+
+[
+  {
+    "number": "1001",
+    "name":"BO",
+    "title": "讲师",
+    "role": 2
+  },
+  {
+    "number": "1002",
+    "name":"SUN",
+    "title": "讲师",
+    "role": 2
+  },
+  {
+    "number": "1003",
+    "name":"ZHANG",
+    "title": "讲师",
+    "role": 2
+  }
+]
+###

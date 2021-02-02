@@ -32,8 +32,8 @@ public class CommonComponent {
         return (long) getCurrentRequest().getAttribute("uId");
     }
 
-    public long getAuthorityId() {
-        return (long) getCurrentRequest().getAttribute("aId");
+    public long getRole() {
+        return (long) getCurrentRequest().getAttribute("role");
     }
 
 }

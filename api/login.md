@@ -7,7 +7,7 @@ post /api/login
 }
 ```
 success:  
-headers: Authorization: 744193c872b677aab12a0ced447882f4cf9fca92a09d428a26ed145ed2ed2eec665c8824ebc353042ba2be136efcb5c6
+headers: authorization: 744193c872b677aab12a0ced447882f4cf9fca92a09d428a26ed145ed2ed2eec665c8824ebc353042ba2be136efcb5c6
 
 ```json
 {
@@ -17,7 +17,8 @@ headers: Authorization: 744193c872b677aab12a0ced447882f4cf9fca92a09d428a26ed145e
   }
 }
 ```
-error: 401
+error: 401  
+http status code: 200
 ```json
 {
   "code": 401,

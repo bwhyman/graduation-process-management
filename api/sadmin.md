@@ -13,7 +13,7 @@ not null: number/name/role/password/
   }
 ]
 ```
-success:
+success: 将全部教师返回。即刷新教师列表     
 ```json
 {
   "code": 200,

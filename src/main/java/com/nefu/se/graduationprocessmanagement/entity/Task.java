@@ -21,11 +21,11 @@ public class Task {
 
     private LocalDateTime endTime;
 
-    private Short type;
+    private Integer type;
 
-    private Short status;
+    private Integer status;
 
-    private Short target;
+    private Integer target;
 
     private Long teacherId;
 

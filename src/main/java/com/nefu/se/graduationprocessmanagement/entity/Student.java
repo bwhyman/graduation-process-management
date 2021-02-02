@@ -17,7 +17,7 @@ public class Student {
 
     private Long teacherId;
 
-    private Short group;
+    private Integer group;
 
     private String topic;
 

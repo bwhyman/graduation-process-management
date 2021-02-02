@@ -13,11 +13,11 @@ import lombok.NoArgsConstructor;
 public class Teacher {
     private Long id;
 
-    private Short group;
+    private Integer group;
 
     private String title;
 
-    private Short quantity;
+    private Integer quantity;
 
     private String description;
 
