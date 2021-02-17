@@ -1,18 +1,15 @@
 spring:
   application:
     name: graduation-process-management
-  profiles:
-    active: dev
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/graduation_process_management?serverTimezone=Asia/Shanghai
+    username: root
+    password: root
     hikari:
       connection-timeout: 10000
   jackson:
     default-property-inclusion: non_null
-
-mybatis-plus:
-  configuration:
-    database-id: assign_id
 
 logging:
   level:
@@ -20,21 +17,14 @@ logging:
     com:
       nefu: debug
   pattern:
-    console: logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} %-5level %C.%M[%line] - %msg%n
+    console: '%-5level %C.%M[%line] - %msg%n'
 server:
   port: 8080
-
----
-spring:
-  profiles: dev
-  datasource:
-    url: jdbc:mysql://localhost:3306/graduation_process_management?serverTimezone=Asia/Shanghai
-    username: root
-    password: root
-
 my:
   secretkey: R28K42ZEJ8LWRHU5
   salt: 636eac2534bcfcb0
+  upload: D:/upload
+
 ---
 spring:
   profiles: prod
@@ -44,8 +34,11 @@ spring:
     password: root
     initialization-mode: always
     schema: classpath:schema-mysql.sql
+my:
+  secretkey: R28K42ZEJ8LWRHU5
+  salt: 636eac2534bcfcb0
+  upload: {upload}
 logging:
   level:
-    root: warn
     com:
       nefu: info

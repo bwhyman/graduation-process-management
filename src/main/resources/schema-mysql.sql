@@ -4,7 +4,7 @@ create table if not exists student
         primary key,
     clazz       varchar(16)                         null,
     teacher_id  bigint                              null,
-    group     int                                 null,
+    `group`     int                                 null,
     topic       varchar(45)                         null,
     update_time timestamp default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP
 );
@@ -51,7 +51,7 @@ create table if not exists teacher
 (
     id          bigint                              not null
         primary key,
-    group       int                                 null,
+    `group`       int                                 null,
     title       varchar(8)                          null,
     quantity    int                                 null,
     description varchar(100)                        null,
@@ -78,6 +78,7 @@ create table if not exists user
     role        int                                 not null,
     update_time timestamp default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP,
     password    varchar(65)                         not null,
-    unique (number)
+    unique (number),
+    index (number)
 );
 
